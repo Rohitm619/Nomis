@@ -1,1 +1,47 @@
-<p>tabs works!</p>
+<div
+  class="container-fluid row header-menu text-center"
+  style="font-family: 'Times New Roman', Times, serif"
+>
+  <div
+    (click)="showTab('all')"
+    class="col p-2"
+    [ngClass]="{ 'bt-border': parentClass.tab === 'all' }"
+  >
+    <div class="btn btn-sm btn-secondary">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+    <p class="mt-1">ALL</p>
+  </div>
+  <div
+    (click)="showTab('optimizationEF')"
+    class="col p-2"
+    [ngClass]="{ 'bt-border': parentClass.tab === 'optimizationEF' }"
+  >
+    <div class="btn btn-sm btn-success">
+      <i class="fa fa-circle-o" aria-hidden="true"></i>
+    </div>
+    <div class="btn btn-sm btn-danger">
+      <i class="fa fa-etsy" aria-hidden="true"></i>
+    </div>
+    <p class="mt-1">OPTIMIZATION & EF</p>
+  </div>
+  <div
+    (click)="showTab('baselineCreation')"
+    class="col p-2"
+    [ngClass]="{ 'bt-border': parentClass.tab === 'baselineCreation' }"
+  >
+    <div class="btn btn-sm btn-primary">B</div>
+    <p class="mt-1">BASELINE CREATION</p>
+  </div>
+  <div
+    (click)="showTab('simulation')"
+    class="col p-2"
+    [ngClass]="{ 'bt-border': parentClass.tab === 'simulation' }"
+  >
+    <div class="btn btn-sm btn-dark">
+      <i class="fa fa-area-chart" aria-hidden="true"></i>
+    </div>
+    <p class="mt-1">SIMULATION</p>
+  </div>
+  <hr />
+</div>

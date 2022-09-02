@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-waiting-in-queue',
   templateUrl: './waiting-in-queue.component.html',
-  styleUrls: ['./waiting-in-queue.component.css']
+  styleUrls: ['./waiting-in-queue.component.css'],
 })
 export class WaitingInQueueComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() parentClass: any;
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,0 +1,29 @@
+/* .header-menu .col:hover {
+  background: #007bff15;
+  border-bottom: 3px blue solid;
+} */
+
+.fs {
+  font-size: 8px;
+}
+
+.bt-border {
+  background: #007bff15;
+  border-bottom: 3px blue solid;
+}
+
+.header-menu .col {
+  transition: background 0.3s;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fa {
+  font-size: 13px;
+}
+
+.header-menu .col .btn {
+  margin: 2px;
+  z-index: -1;
+}

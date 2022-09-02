@@ -1,1 +1,36 @@
-<p>in-progress works!</p>
+<p class="mb-1 fw-bold">
+  <i class="fa fa-refresh fa-sync fa-spin" aria-hidden="true"></i> In Progress
+</p>
+<div class="border" [ngStyle]="{ overflow: 'auto', height: '90px' }">
+  <table class="table text-center">
+    <thead class="bg-secondary" [ngStyle]="{ position: 'sticky', top: 0 }">
+      <tr class="text-light">
+        <th class="" style="width: 10%">Type</th>
+        <th class="" style="width: 10%">Created</th>
+        <th class="" style="width: 20%">Name</th>
+        <th class="" style="width: 20%">Description</th>
+        <th class="" style="width: 15%">Owner</th>
+        <th class="" style="width: 15%">Started Running</th>
+        <th class="" style="width: 10%">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of parentClass.in_progress_list; let i = index">
+        <td><div class="btn btn-sm btn-primary">B</div></td>
+        <td>{{ obj.second }}</td>
+        <td>{{ obj.third }}</td>
+        <td>{{ obj.fourth }}</td>
+        <td>{{ obj.fifth }}</td>
+        <td>{{ obj.sixth }}</td>
+        <td>
+          <button
+            class="btn btn-sm btn-danger rounded-5 mx-1"
+            (click)="parentClass.deleteEle(i)"
+          >
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

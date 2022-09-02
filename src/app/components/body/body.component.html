@@ -1,1 +1,31 @@
-<p>body works!</p>
+<div>
+  <div class="p-1">
+    <app-tabs [parentClass]="this"></app-tabs>
+  </div>
+
+  <div class="container-fluid" [ngSwitch]="tab">
+    <div *ngSwitchCase="'all'" class="container-fluid">
+      <app-in-progress [parentClass]="this"></app-in-progress>
+      <app-waiting-in-queue [parentClass]="this"></app-waiting-in-queue>
+      <app-recently-completed [parentClass]="this"></app-recently-completed>
+    </div>
+    <div *ngSwitchCase="'optimizationEF'" class="container-fluid">
+      <app-in-progress [parentClass]="this"></app-in-progress><br />
+      <!-- <app-waiting-in-queue [parentClass]="this"></app-waiting-in-queue><br />
+      <app-recently-completed [parentClass]="this"></app-recently-completed> -->
+    </div>
+    <div *ngSwitchCase="'baselineCreation'" class="container-fluid">
+      <!-- <app-in-progress [parentClass]="this"></app-in-progress><br /> -->
+      <app-waiting-in-queue [parentClass]="this"></app-waiting-in-queue><br />
+      <!-- <app-recently-completed [parentClass]="this"></app-recently-completed> -->
+    </div>
+    <div *ngSwitchCase="'simulation'" class="container-fluid">
+      <app-in-progress [parentClass]="this"></app-in-progress><br />
+      <app-waiting-in-queue [parentClass]="this"></app-waiting-in-queue><br />
+      <app-recently-completed [parentClass]="this"></app-recently-completed>
+    </div>
+    <div *ngSwitchCase="'default'">
+      <h1>this is a default switch case div</h1>
+    </div>
+  </div>
+</div>

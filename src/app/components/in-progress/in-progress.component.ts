@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-in-progress',
   templateUrl: './in-progress.component.html',
-  styleUrls: ['./in-progress.component.css']
+  styleUrls: ['./in-progress.component.css'],
 })
 export class InProgressComponent implements OnInit {
+  @Input() parentClass: any;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
